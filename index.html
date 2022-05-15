@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">  
+        <title>ecommerce-product-page-main</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <input type="radio" name="img" id="img1" checked>
+            <input type="radio" name="img" id="img2">
+            <input type="radio" name="img" id="img3">
+            <input type="radio" name="img" id="img4">
+            <header>
+                <nav class="top-nav">
+                    <div class="nav-brand">
+                        <img src="images/logo.svg" alt="Sitebrand">
+                    </div>
+                    <div id="menu-toggler" class="menu-toggler">
+                        <img src="images/icon-menu.svg" alt="icon-menu">
+                    </div>
+                    <div class="menu-dropdown" id="menuDrpDown">
+                        <div class="dropdow-item">
+                            <div class="closeicon" id="closeicon">
+                                <img src="images/icon-close.svg" alt="closeicon">
+                            </div>
+                            <ul>
+                                <li>Collections</li>
+                                <li>Men</li>
+                                <li>Women</li>
+                                <li>About</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="onsidemenu">
+                        <div class="cart" id="iconCart">
+                            <span id="cartInner" class="cartinner"></span>
+                            <img id="iconCartImg" src="images/icon-cart.svg" alt="cart"> 
+                        </div>
+                        <div class="imgavatar">
+                            <img src="images/image-avatar.png" alt="imgAvatar">
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <article>
+                <section>
+                    <div class="products">
+                        <div id="imgPrd" class="img-product">
+                            <div class="nav-btns">
+                                <button id="btnprev" class="btnprev">  
+                                </button>
+    
+                                <button id="btnext" class="btnext">
+                                </button>
+                            </div>
+                        
+                            <div class="imgPrd">
+                                <div class="img-item active" onclick="activeLightbox()">
+                                    <img src="images/image-product-1.jpg" alt="img_product1">
+                                </div>
+                                <div class="img-item" onclick=activeLightbox()">
+                                    <img src="images/image-product-2.jpg" alt="img_product2">
+                                </div>
+                                <div class="img-item" onclick="activeLightbox()">
+                                    <img src="images/image-product-3.jpg" alt="img_product3">
+                                </div>
+                                <div class="img-item" onclick="activeLightbox()">
+                                    <img src="images/image-product-4.jpg" alt="img_product4">
+                                </div>   
+                            </div>
+
+                            <div class="img_prodcTumbnail">
+                                <Label for="img1">
+                                    <img class="img1-item active" src="images/image-product-1-thumbnail.jpg" alt="prodc1">
+                                </Label>
+                                <Label for="img2">
+                                    <img class="img2-item active" src="images/image-product-2-thumbnail.jpg" alt="prodc2">
+                                </Label>
+                                <Label for="img3">
+                                    <img class="img3-item active" src="images/image-product-3-thumbnail.jpg" alt="prodc3">
+                                </Label>
+                                <Label for="img4" >
+                                    <img class="img4-item active" src="images/image-product-4-thumbnail.jpg" alt="prodc4">
+                                </Label>
+                            </div>
+                        </div>
+                    </div>   
+                    
+                </section>
+                <aside>
+                    <h2>sneakes company</h2>
+                    <h3>Fall Limited Edition <span>Sneakers</span></h3>
+                    <p>
+                        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                        durable rubber outer sole, they’ll withstand everything the weather can offer.
+                    </p>
+                    <div class="prices-section">
+                        <div class="prices">
+                            <span class="price">$125.00</span>
+                            <span class="off">50%</span>
+                            <span class="total">$250.00</span>
+                        </div>
+                        <div class="addtocart">
+                            <div class="sizes">
+                                <img id="minus" class="minus" src="images/icon-minus.svg" alt="minus">
+                                <span id="size">0</span>
+                                <img id="plus" class="plus" src="images/icon-plus.svg" alt="plus">
+                            </div>
+                            <button id="addtocartbtn"><img src="images/icon-cart.svg" alt="cart"> Add to Cart</button>
+                        </div>
+                    </div>
+                </aside>
+            </article>
+            <div class="basquet" id="basquet">
+                <h2>Cart</h2>
+                <div class="basquet-inner">
+                    <div class="empty-cart" id="emptyCard">
+                        Your cart is empty
+                    </div>
+                    <div class="filledcart" id="filledcart">
+                        <div class="filledcart-item">
+                            <div class="flprdicon">
+                                <img src="images/image-product-1-thumbnail.jpg" alt="prodc1">
+                            </div>
+                            <div class="flcartdesc">
+                                <p>Autumn Limited Edition</p>
+                                <p>$125.00 x <span id="flcartsize"></span><span id="total"></span></p>
+                            </div>
+                            <div id="trashicon" class="trashicon">
+                                <img src="images/icon-delete.svg" alt="icondelete">
+                            </div>
+                        </div>
+                        <button>checkout</button>
+                    </div>
+                </div>                
+            </div>
+            <div class="lightbox" id="lightbox">
+                <div class="lgbox-closeicon" id="lgboxIconclose">
+                    <img src="images/icon-close.svg" alt="closeicon" class="close active" id="lgboxclose">                         
+                    <img src="images/icon-close2.svg" alt="closeicon2">                         
+                </div>
+                <div class="imgPrd-lgbox">
+                    <div class="imgprd-item active">
+                        <img src="images/image-product-1.jpg" alt="img_product1">
+                    </div>
+                    <div class="imgprd-item">
+                        <img src="images/image-product-2.jpg" alt="img_product2">
+                    </div>
+                    <div class="imgprd-item">
+                        <img src="images/image-product-3.jpg" alt="img_product3">
+                    </div>
+                    <div class="imgprd-item">
+                        <img src="images/image-product-4.jpg" alt="img_product4">
+                    </div>
+                </div>
+                <div class="lgbox-Tumbnail">
+                    
+                    <Label for="img1">
+                        <img class="lgtbnail-item active1" src="images/image-product-1-thumbnail.jpg" alt="prodc1">
+                    </Label>
+                    <Label for="img2">
+                        <img class="lgtbnail-item active2" src="images/image-product-2-thumbnail.jpg" alt="prodc2">
+                    </Label>
+                    <Label for="img3">
+                        <img class="lgtbnail-item active3" src="images/image-product-3-thumbnail.jpg" alt="prodc3">
+                    </Label>
+                    <Label for="img4" >
+                        <img class="lgtbnail-item active4" src="images/image-product-4-thumbnail.jpg" alt="prodc4">
+                    </Label>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/mainScript.js"></script>
+    </body>
+</html>
